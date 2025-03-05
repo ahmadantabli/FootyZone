@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body id="home-body">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+        <!-- Logo and Website Name -->
+        <a class="navbar-brand d-flex align-items-center" href="home.html">
+          <img src="assets/soccer-player.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+          FootyZone
+        </a>
+
+        <!-- Toggler button for mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="matches.html">Matches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tables.html">Tables</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="favorites.html">Favorites</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home-hero-section">
+    <div class="home-hero-background"></div>
+    <div class="hero-content">
+      <h1>Stay up-to-date with scores, matches, and more</h1>
+      <h3>Dive into the world of football like never before</h3>
+      <div class="home-hero-button">
+
+        <a href="matches.html"><button>View Upcoming Matches</button></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="top-news">
+    <h2>Top News</h2>
+    <div class="news">
+      <div class="lnew">
+
+      </div>
+      <div class="rnew">
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+        <div class="fourth"></div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="legendary-moments">
+    <h3>Legendary Moments</h3>
+
+    <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="assets/legendary/cristiano.jpg" class="w-100 carousel-image" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Cristiano Ronaldo</h5>
+            <p>Real Madrid vs Juventus (2017)</p>
+            <a href="https://www.youtube.com/watch?v=mxQOOMX4NQM" target="_blank">
+              <button>Watch Video</button>
+            </a>
+
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="assets/legendary/zidane.webp" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Zidane</h5>
+            <p>Real Madrid vs Bayer Leverkusen (2002)</p>
+            <a href="https://www.youtube.com/watch?v=4TuggkDPw6A" target="_blank">
+              <button>Watch Video</button>
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/legendary/messi.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Lionel Messi</h5>
+            <p>Barcelona vs Getafe (2007)</p>
+            <a href="https://www.youtube.com/watch?v=wwBAqwFLhO0" target="_blank">
+              <button>Watch Video</button>
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/legendary/maradona.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Maradona</h5>
+            <p>Argentina vs England (1986)</p>
+            <a href="https://www.youtube.com/watch?v=fqQfUlVnQXQ" target="_blank">
+              <button>Watch Video</button>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </section>
+  <footer id="white-bg-footer">
+    <p><span>&#169;</span> 2025 <span>|</span> All Rights Reserved <span>|</span> Ahmad Antabli</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

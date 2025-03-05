@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tables</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container">
+        <!-- Logo and Website Name -->
+        <a class="navbar-brand d-flex align-items-center" href="home.html">
+          <img src="assets/soccer-player.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+          FootyZone
+        </a>
+
+        <!-- Toggler button for mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="matches.html">Matches</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tables.html">Tables</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="favorites.html">Favorites</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="tables">
+    <form id="leagueForm" class="mb-3">
+      <select id="choose-league" class="form-select">
+        <option value="4335">Spanish La Liga</option>
+        <option value="4328">English Premier League</option>
+        <option value="4331">German Bundesliga</option>
+        <option value="4332">Italian Serie A</option>
+        <option value="4334">French Ligue 1</option>
+      </select>
+
+      <div class="season">
+        <button id="prev-season">
+          <img src="assets/left-arrow-white.png" alt="" class="default-arrow-img">
+          <img src="assets/left-arrow-red.png" alt="" class="hover-arrow-img">
+        </button>
+        <h3 id="league-season"></h3>
+        <button id="next-season">
+          <img src="assets/right-arrow-white.png" alt="" class="default-arrow-img">
+          <img src="assets/right-arrow-red.png" alt="" class="hover-arrow-img">
+        </button>
+      </div>
+
+    </form>
+    <div class="alert-box" id="customAlert">
+      <p id="alertMessage"></p>
+  </div>
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Logo</th>
+          <th scope="col" width="100px">Add to Fav</th>
+          <th scope="col">Team</th>
+          <th scope="col">Played</th>
+          <th scope="col">Won</th>
+          <th scope="col">Drawn</th>
+          <th scope="col">Lost</th>
+          <th scope="col">GF</th>
+          <th scope="col">GA</th>
+          <th scope="col">GD</th>
+          <th scope="col">Points</th>
+        </tr>
+      </thead>
+      <div class="table-responsive">
+        <tbody id="table-body">
+          <!-- Data will be inserted here -->
+        </tbody>
+      </div>
+      
+    </table>
+
+    <div id="modal-overlay" class="modal-overlay">
+      <div class="modal-content">
+        <img id="modal-logo" src="" alt="Team Logo" class="modal-logo">
+        <div class="modal-buttons">
+          <button id="add-to-favorites">Add to Favorites</button>
+        <button id="close-modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+
+  </section>
+  <footer>
+    <p><span>&#169;</span> 2025 <span>|</span> All Rights Reserved <span>|</span> Ahmad Antabli</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

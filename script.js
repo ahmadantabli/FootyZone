@@ -15,9 +15,9 @@ navbarLinks.forEach(link => {
 //newsapi
 //thesportsdb 
 news = {
-  nkey: '08f5bf03ecef4bee9d5108c6fd3449b0',
+  nkey: '05eacc42b6f212118cc8dc76f7d5f150',
   fetchNews: function () {
-    fetch("https://newsapi.org/v2/everything?q=soccer&sortBy=relevancy&apiKey=" + this.nkey)
+    fetch("https://gnews.io/api/v4/top-headlines?category=sports&lang=en&max=10&q=football%20soccer%20champions%20league&apikey=" + this.nkey)
       .then(response => response.json())
       .then(data => {
         console.log(data)
@@ -43,10 +43,9 @@ news = {
     const leftArticle = data.articles[1];
 
     const leftImage = document.createElement('img');
-    leftImage.src = leftArticle.urlToImage || "placeholder.jpg";
+    leftImage.src = leftArticle.image || "placeholder.jpg";
     leftImage.alt = leftArticle.title;
     leftImage.href = leftArticle.url;
-
     const leftTitle = document.createElement('h2');
     leftTitle.textContent = leftArticle.title;
 
@@ -71,11 +70,11 @@ news = {
       const div = rightDivs[i - 2];
       const content = document.createElement('div')
       const image = document.createElement('img');
-      image.src = article.urlToImage || "placeholder.jpg";
+      image.src = article.image || "placeholder.jpg";
       image.alt = article.title;
 
       const title = document.createElement('h3');
-      title.textContent = article.title.split(':')[0] + ':';
+      title.textContent = article.title;
 
       const desc = document.createElement('p');
       desc.textContent = article.description || "No description available.";
@@ -98,7 +97,6 @@ news = {
 if (window.location.pathname.endsWith('/home')) {
   news.fetchNews();
 }
-
 
 
 
@@ -276,9 +274,9 @@ const leagues = {
           <td>${team.intWin}</td>
           <td>${team.intDraw}</td>
           <td>${team.intLoss}</td>
-          <td>${team.intGoalsFor}</td>
-          <td>${team.intGoalsAgainst}</td>
-          <td>${team.intGoalDifference}</td>
+          <td class="hide-on-mobile">${team.intGoalsFor}</td>
+          <td class="hide-on-mobile">${team.intGoalsAgainst}</td>
+          <td class="hide-on-mobile">${team.intGoalDifference}</td>
           <td>${team.intPoints}</td>
         </tr>
       `;

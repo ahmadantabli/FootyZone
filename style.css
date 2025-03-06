@@ -182,10 +182,10 @@ a {
     object-fit: cover;
     margin-bottom: 15px;
     border-radius: 5px;
+    aspect-ratio: 2/1;
 }
 
 .rnew div h3 {
-    font-size: medium;
     margin-bottom: 8px;
 }
 
@@ -867,6 +867,9 @@ footer {
     }
     .lnew, .rnew{
         width: 100%;
+    }
+    .lnew, .rnew div{
+        margin-top: 10px;
     } 
     .rnew{
         display: flex;
@@ -910,7 +913,12 @@ footer {
         padding-right: 0 !important;
         overflow-x: auto;
     }
-
+    #choose-league{
+        width: 150px;
+    }
+    .hide-on-mobile{
+        display: none;
+    }
     /* contact page */
     #contact {
         margin: 0 !important;

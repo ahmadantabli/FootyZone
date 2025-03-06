@@ -74,7 +74,8 @@
     </form>
     <div class="alert-box" id="customAlert">
       <p id="alertMessage"></p>
-  </div>
+    </div>
+
     <table class="table table-hover table-bordered">
       <thead>
         <tr>
@@ -86,18 +87,18 @@
           <th scope="col">Won</th>
           <th scope="col">Drawn</th>
           <th scope="col">Lost</th>
-          <th scope="col">GF</th>
-          <th scope="col">GA</th>
-          <th scope="col">GD</th>
+          <th scope="col" class="hide-on-mobile">GF</th>
+          <th scope="col" class="hide-on-mobile">GA</th>
+          <th scope="col" class="hide-on-mobile">GD</th>
           <th scope="col">Points</th>
         </tr>
       </thead>
-      <div class="table-responsive">
-        <tbody id="table-body">
-          <!-- Data will be inserted here -->
-        </tbody>
-      </div>
-      
+
+      <tbody id="table-body">
+        <!-- Data will be inserted here -->
+      </tbody>
+
+
     </table>
 
     <div id="modal-overlay" class="modal-overlay">
@@ -105,9 +106,9 @@
         <img id="modal-logo" src="" alt="Team Logo" class="modal-logo">
         <div class="modal-buttons">
           <button id="add-to-favorites">Add to Favorites</button>
-        <button id="close-modal">Close</button>
+          <button id="close-modal">Close</button>
         </div>
-        
+
       </div>
     </div>
 

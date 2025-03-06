@@ -95,7 +95,7 @@ news = {
     }
   }
 }
-if (window.location.pathname === "/home.html") {
+if (window.location.pathname.endsWith('/home')) {
   news.fetchNews();
 }
 

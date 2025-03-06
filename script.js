@@ -202,7 +202,7 @@ matches = {
     })
   }
 }
-if (window.location.pathname === "/matches.html") {
+if (window.location.pathname.endsWith('/matches')) {
   const matchesForm = document.querySelector('#matchesForm');
   matchesForm.addEventListener('submit', event => {
     event.preventDefault();
@@ -380,7 +380,7 @@ const leagues = {
         localStorage.setItem('favorites', JSON.stringify(favorites));
         leagues.displayFavorites();
       });
-      
+
       favoritesPage.style.height = 'auto';
       teamCard.appendChild(teamLogo);
       teamCard.appendChild(teamNameElem);
@@ -393,7 +393,7 @@ const leagues = {
 
 
 
-if (window.location.pathname === "/tables.html") {
+if (window.location.pathname.endsWith('/tables')) {
   const leagueSelection = document.querySelector('#choose-league');
   const prevSeasonButton = document.querySelector('#prev-season');
   const nextSeasonButton = document.querySelector('#next-season');
@@ -440,7 +440,7 @@ if (window.location.pathname === "/tables.html") {
 }
 
 
-if (window.location.pathname === "/favorites.html") {
+if (window.location.pathname.endsWith('/favorites')) {
   leagues.displayFavorites();
 }
 

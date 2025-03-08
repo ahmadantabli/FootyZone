@@ -12,6 +12,8 @@ navbarLinks.forEach(link => {
   }
 });
 
+
+
 //newsapi
 //thesportsdb 
 news = {
@@ -25,7 +27,7 @@ news = {
           document.getElementById('top-news').style.display = 'flex';
           document.getElementById('hr-news-moments').style.display = 'block';
           this.displayNews(data);
-        }else {
+        } else {
           console.error("No articles found.");
         }
       })
@@ -273,6 +275,7 @@ const leagues = {
     }
 
     data.table.forEach(team => {
+      // creating the row for each team in the league 
       const row = `
         <tr>
           <th>${team.intRank}</th>
@@ -400,7 +403,7 @@ const leagues = {
 
 
 
-if (window.location.pathname.endsWith('/tables')) {
+if (window.location.pathname.endsWith('/leagues')) {
   const leagueSelection = document.querySelector('#choose-league');
   const prevSeasonButton = document.querySelector('#prev-season');
   const nextSeasonButton = document.querySelector('#next-season');

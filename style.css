@@ -89,7 +89,7 @@ a {
 
 #top-news {
     margin-top: 20px;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -223,6 +223,10 @@ a {
     /* Ensures it doesn't interfere with clicks */
 }
 
+#hr-news-moments {
+    display: none;
+}
+
 .carousel-item {
     height: 80vh;
 }
@@ -287,6 +291,7 @@ footer span {
 }
 
 #matches h3 {
+    text-align: center;
     margin-bottom: 20px;
     opacity: 0;
     animation: slideDown 1s ease forwards;
@@ -385,7 +390,6 @@ footer span {
     background-color: #f87069;
     color: #102542;
     border-radius: 5px;
-    width: 80%;
     text-align: center;
     opacity: 0;
     animation: slideUp 1s ease forwards;
@@ -852,38 +856,63 @@ footer {
 
 
 
+@media only screen and (max-width:900px) {
+    .carousel-item {
+        height: auto;
+    }
+}
 
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:600px) {
 
     /* home page */
-    .hero-content h1{
+    .hero-content h1 {
         font-size: x-large;
     }
-    .hero-content h3{
+
+    .hero-content h3 {
         font-size: medium;
     }
-    .news{
+
+    .news {
         flex-direction: column;
     }
-    .lnew, .rnew{
+
+    .lnew,
+    .rnew {
         width: 100%;
     }
-    .lnew, .rnew div{
+
+    .lnew,
+    .rnew div {
         margin-top: 10px;
-    } 
-    .rnew{
+    }
+
+    .rnew {
         display: flex;
         flex-direction: column;
     }
-    .carousel-item{
-        
+
+    .carousel-item {
         height: auto;
+        padding: 0;
+    }
+
+    .carousel-item h5 {
+        font-size: medium;
+        margin: 0;
+    }
+
+    .carousel-item p {
+        font-size: small;
+        margin: 0;
+    }
+
+    .carousel-item button {
+        padding: 3px;
     }
 
     #favorite-clubs {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        padding-left: 20px;
     }
 
     #favorites {
@@ -905,20 +934,27 @@ footer {
     }
 
     footer {
-        margin-top: 10px;
+        margin-top: 50px;
     }
 
     /* tables page */
     #tables {
-        padding-right: 0 !important;
+        padding: 0 !important;
         overflow-x: auto;
     }
-    #choose-league{
+
+    #choose-league {
         width: 150px;
     }
-    .hide-on-mobile{
+
+    .season {
+        width: 200px;
+    }
+
+    .hide-on-mobile {
         display: none;
     }
+
     /* contact page */
     #contact {
         margin: 0 !important;
@@ -927,4 +963,65 @@ footer {
         height: 90vh;
     }
 
+}
+
+@media only screen and (min-width: 451px) and (max-width: 530px) {
+    #tables {
+        padding-right: 10px !important;
+        padding-left: 80px !important;
+    }
+
+}
+
+@media only screen and (max-width:450px) {
+    #tables {
+        padding-right: 0 !important;
+        padding-left: 120px !important;
+    }
+}
+
+@media only screen and (max-width:390px) {
+    #tables {
+        padding-right: 0 !important;
+        padding-left: 150px !important;
+    }
+
+    #favorite-clubs {
+        display: grid;
+    }
+}
+
+@media only screen and(min-width:600px) and (max-width:770px) {
+    footer {
+        margin-top: 130px;
+    }
+
+    .carousel-item {
+        padding: 0;
+    }
+
+    #message {
+        height: 80px !important;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:820px) {
+    #favorite-clubs>* {
+        flex: 0 0 35%
+    }
+
+    #contact {
+        height: auto;
+    }
+
+    .news {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lnew,
+    .rnew {
+        width: 100%;
+    }
 }

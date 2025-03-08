@@ -21,7 +21,13 @@ news = {
       .then(response => response.json())
       .then(data => {
         console.log(data)
-        this.displayNews(data)
+        if (data.articles && data.articles.length > 0) {
+          document.getElementById('top-news').style.display = 'flex';
+          document.getElementById('hr-news-moments').style.display = 'block';
+          this.displayNews(data);
+        }else {
+          console.error("No articles found.");
+        }
       })
   },
   displayNews: function (data) {
@@ -206,6 +212,10 @@ if (window.location.pathname.endsWith('/matches')) {
     event.preventDefault();
     const team1 = matchesForm.team1;
     const team2 = matchesForm.team2;
+    if (!team1 || !team2) {
+      alert("Please enter both team names.");
+      return;
+    }
     matches.fetchMatches(team1.value, team2.value);
     matchesForm.reset();
   })

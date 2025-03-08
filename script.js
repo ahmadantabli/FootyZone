@@ -100,9 +100,8 @@ news = {
     }
   }
 }
-if (window.location.pathname.endsWith('/home')) {
-  news.fetchNews();
-}
+news.fetchNews();
+
 
 
 
